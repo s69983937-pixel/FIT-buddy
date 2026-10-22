@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Your FitBuddy Plan</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <main class="container">
+        <section class="card">
+            <p class="tag">YOUR PERSONAL PLAN</p>
+            <h1>Let's get started, {{ name }}!</h1>
+
+            <h2>Your Workout Plan</h2>
+            <pre class="plan">{{ plan }}</pre>
+
+            <h2>Nutrition & Recovery Tip</h2>
+            <p class="tip">{{ nutrition_tip }}</p>
+
+            <a class="button" href="/">Create Another Plan</a>
+            <p><a href="/view-all-users">View Saved Plans</a></p>
+        </section>
+    </main>
+</body>
+</html>

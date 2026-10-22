@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Saved Plans | FitBuddy AI</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <main class="container">
+        <section class="card">
+            <h1>Saved Fitness Plans</h1>
+
+            {% for user in users %}
+                <article class="saved-plan">
+                    <h3>{{ user.name }}</h3>
+                    <p>Goal: {{ user.goal }}</p>
+                    <p>Level: {{ user.level }} · Days: {{ user.days }}</p>
+
+                    <details>
+                        <summary>View workout plan</summary>
+                        <pre class="plan">{{ user.plan }}</pre>
+                        <h4>Nutrition tip</h4>
+                        <p>{{ user.nutrition_tip }}</p>
+                    </details>
+                </article>
+            {% else %}
+                <p>No plans saved yet. Create your first plan!</p>
+            {% endfor %}
+
+            <a class="button" href="/">Back to Home</a>
+        </section>
+    </main>
+</body>
+</html>
